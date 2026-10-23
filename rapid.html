@@ -1,0 +1,988 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>QUICK WORK | Creative & Digital Services</title>
+<meta name="description" content="Quick Work offers logo design, graphic design, MSME and GSTIN assistance, and professional website building.">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:"Segoe UI",Arial,sans-serif;
+    background:#f5f7ff;
+    color:#20243a;
+    line-height:1.7;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+button,input,select,textarea{
+    font:inherit;
+}
+
+/* NAVIGATION */
+
+header{
+    background:#15102e;
+    color:white;
+    padding:16px 6%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:16px;
+    position:sticky;
+    top:0;
+    z-index:100;
+    box-shadow:0 5px 25px #0002;
+}
+
+.brand{
+    font-size:29px;
+    font-weight:900;
+    letter-spacing:1px;
+}
+
+.brand span{
+    color:#ffcc48;
+}
+
+.brand small{
+    display:block;
+    font-size:10px;
+    letter-spacing:3px;
+    color:#bcb8e8;
+    font-weight:600;
+}
+
+nav{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+nav a{
+    color:#fff;
+    font-size:13px;
+    font-weight:700;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#ffcc48;
+}
+
+/* HERO */
+
+.hero{
+    min-height:620px;
+    display:flex;
+    align-items:center;
+    padding:90px 7%;
+    color:white;
+    overflow:hidden;
+    background:
+      radial-gradient(circle at 85% 15%,#ff4fa866,transparent 28%),
+      radial-gradient(circle at 80% 85%,#00d9ff55,transparent 30%),
+      linear-gradient(125deg,#171037,#32206c,#531d71);
+}
+
+.hero-content{
+    max-width:850px;
+}
+
+.eyebrow{
+    display:inline-block;
+    padding:8px 17px;
+    border:1px solid #ffffff50;
+    background:#ffffff12;
+    border-radius:30px;
+    font-size:12px;
+    letter-spacing:2px;
+    color:#ffda68;
+    font-weight:800;
+}
+
+.hero h1{
+    font-size:clamp(44px,7vw,80px);
+    line-height:1.12;
+    margin:25px 0;
+    letter-spacing:-2px;
+}
+
+.color-text{
+    background:linear-gradient(90deg,#ffda68,#ff70bd,#64eaff);
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+}
+
+.hero p{
+    color:#e3defc;
+    max-width:650px;
+    font-size:17px;
+}
+
+.buttons{
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+    margin-top:30px;
+}
+
+.btn{
+    display:inline-block;
+    padding:13px 23px;
+    border-radius:9px;
+    font-weight:800;
+    transition:.3s;
+    border:0;
+    cursor:pointer;
+}
+
+.btn:hover{
+    transform:translateY(-4px);
+    box-shadow:0 10px 25px #0002;
+}
+
+.btn-main{
+    background:linear-gradient(100deg,#ff4f9a,#ff8c55);
+    color:white;
+}
+
+.btn-outline{
+    border:1px solid #ffffff70;
+    color:white;
+    background:#ffffff0b;
+}
+
+/* COMMON SECTIONS */
+
+section{
+    padding:75px 6%;
+    scroll-margin-top:85px;
+}
+
+.section-title{
+    max-width:760px;
+    margin:0 auto 42px;
+    text-align:center;
+}
+
+.section-title small{
+    letter-spacing:3px;
+    font-size:12px;
+    font-weight:900;
+}
+
+.section-title h2{
+    font-size:clamp(30px,4vw,43px);
+    line-height:1.25;
+    margin:12px 0;
+}
+
+.section-title p{
+    font-size:15px;
+}
+
+/* SERVICE LAYOUT */
+
+.service-grid{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:26px;
+    max-width:1150px;
+    margin:auto;
+}
+
+.service-card{
+    border-radius:20px;
+    padding:32px;
+    position:relative;
+    overflow:hidden;
+    transition:.3s;
+    box-shadow:0 12px 35px #0000000c;
+}
+
+.service-card:hover{
+    transform:translateY(-7px);
+    box-shadow:0 20px 45px #00000019;
+}
+
+.service-icon{
+    width:72px;
+    height:72px;
+    display:grid;
+    place-items:center;
+    border-radius:20px;
+    background:#ffffff35;
+    font-size:36px;
+    margin-bottom:20px;
+}
+
+.service-card h3{
+    font-size:27px;
+    margin-bottom:10px;
+}
+
+.service-card p{
+    font-size:14px;
+    margin-bottom:18px;
+}
+
+.service-card ul{
+    list-style:none;
+    margin-bottom:23px;
+}
+
+.service-card li{
+    margin:7px 0;
+    font-size:14px;
+}
+
+.service-card li::before{
+    content:"✓";
+    font-weight:900;
+    margin-right:10px;
+}
+
+.service-link{
+    display:inline-block;
+    font-size:13px;
+    font-weight:900;
+    padding:10px 15px;
+    background:#ffffffd9;
+    border-radius:8px;
+    color:#20203b;
+}
+
+/* DISTINCT SERVICE COLORS */
+
+.logo-service{
+    background:linear-gradient(135deg,#ffe37b,#ffad4f);
+    color:#542500;
+}
+
+.logo-service .service-icon{
+    background:#ffffff66;
+}
+
+.graphic-service{
+    background:linear-gradient(135deg,#ff70b7,#ff4d73);
+    color:#fff;
+}
+
+.graphic-service .service-icon{
+    background:#ffffff30;
+}
+
+.registration-service{
+    background:linear-gradient(135deg,#6c7bff,#4838c9);
+    color:white;
+}
+
+.registration-service .service-icon{
+    background:#ffffff25;
+}
+
+.website-service{
+    background:linear-gradient(135deg,#45e8c0,#00a9bb);
+    color:#063e43;
+}
+
+.website-service .service-icon{
+    background:#ffffff65;
+}
+
+/* RAINBOW STRIP */
+
+.rainbow{
+    padding:30px 6%;
+    text-align:center;
+    color:white;
+    font-size:clamp(19px,3vw,27px);
+    font-weight:900;
+    background:linear-gradient(100deg,#733eff,#ed42a5,#ff944b,#00bfa6);
+}
+
+/* ABOUT SECTION */
+
+.about{
+    background:#ffffff;
+}
+
+.about-grid{
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:20px;
+    max-width:1100px;
+    margin:auto;
+}
+
+.about-card{
+    padding:25px;
+    border-radius:16px;
+    background:#f5f2ff;
+    border-bottom:4px solid #8a55ff;
+}
+
+.about-card:nth-child(2){
+    background:#fff0f6;
+    border-color:#f14c9c;
+}
+
+.about-card:nth-child(3){
+    background:#e8fbff;
+    border-color:#00a8d8;
+}
+
+.about-card h3{
+    font-size:18px;
+    margin-bottom:8px;
+}
+
+.about-card p{
+    font-size:14px;
+    color:#555e77;
+}
+
+/* WORK PROCESS */
+
+.process{
+    background:#171037;
+    color:white;
+}
+
+.process .section-title p{
+    color:#d0c9ed;
+}
+
+.process .section-title small{
+    color:#ffda68;
+}
+
+.process-grid{
+    display:grid;
+    grid-template-columns:repeat(4,minmax(0,1fr));
+    gap:18px;
+}
+
+.process-card{
+    padding:24px;
+    border:1px solid #ffffff28;
+    border-radius:15px;
+    background:#ffffff0c;
+}
+
+.process-card span{
+    color:#66eaff;
+    font-size:12px;
+    font-weight:900;
+    letter-spacing:2px;
+}
+
+.process-card h3{
+    margin:12px 0 7px;
+}
+
+.process-card p{
+    font-size:13px;
+    color:#d1d5f0;
+}
+
+/* CONTACT SECTION */
+
+.contact{
+    background:linear-gradient(135deg,#e7eaff,#fff0f8);
+}
+
+.contact .section-title small{
+    color:#773be8;
+}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
+    max-width:1050px;
+    margin:auto;
+}
+
+.contact-info{
+    padding:30px;
+    color:white;
+    border-radius:20px;
+    background:linear-gradient(145deg,#37216e,#9a318a);
+}
+
+.contact-info h3,
+.enquiry-form h3{
+    font-size:24px;
+    margin-bottom:18px;
+}
+
+.contact-info p{
+    margin:16px 0;
+    overflow-wrap:anywhere;
+}
+
+.contact-info a{
+    color:#ffdf72;
+    overflow-wrap:anywhere;
+}
+
+.contact-info .btn{
+    margin-top:15px;
+}
+
+.enquiry-form{
+    padding:30px;
+    background:white;
+    border-radius:20px;
+    box-shadow:0 10px 35px #0000000c;
+}
+
+.enquiry-form label{
+    display:block;
+    margin:12px 0 5px;
+    font-weight:700;
+    font-size:13px;
+}
+
+.enquiry-form input,
+.enquiry-form select,
+.enquiry-form textarea{
+    width:100%;
+    padding:12px;
+    border:1px solid #d9d9ed;
+    border-radius:8px;
+    background:#fafaff;
+    color:#24243e;
+    outline-color:#8b35ff;
+}
+
+.enquiry-form textarea{
+    min-height:100px;
+    resize:vertical;
+}
+
+.enquiry-form button{
+    margin-top:17px;
+    width:100%;
+}
+
+/* FOOTER */
+
+footer{
+    text-align:center;
+    padding:32px 6%;
+    background:#100b2d;
+    color:white;
+}
+
+footer .brand{
+    margin-bottom:10px;
+}
+
+footer p{
+    color:#c4c6e3;
+    font-size:13px;
+    margin-top:9px;
+}
+
+.footer-links{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+    margin:18px 0;
+}
+
+.footer-links a{
+    color:#6beaff;
+    font-size:13px;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media(max-width:850px){
+    header{
+        justify-content:center;
+        text-align:center;
+    }
+
+    nav{
+        justify-content:center;
+    }
+
+    .process-grid{
+        grid-template-columns:repeat(2,minmax(0,1fr));
+    }
+
+    .about-grid{
+        grid-template-columns:1fr 1fr;
+    }
+}
+
+@media(max-width:600px){
+    header{
+        padding:15px 4%;
+    }
+
+    nav{
+        gap:12px;
+    }
+
+    nav a{
+        font-size:12px;
+    }
+
+    .hero{
+        padding:65px 6%;
+        min-height:550px;
+    }
+
+    .hero h1{
+        letter-spacing:-1px;
+    }
+
+    section{
+        padding:55px 5%;
+    }
+
+    .service-grid,
+    .about-grid,
+    .process-grid,
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .service-card,
+    .contact-info,
+    .enquiry-form{
+        padding:25px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+    <a href="#home">
+        <div class="brand">QUICK <span>WORK</span></div>
+        <div class="brand small">CREATIVE • DIGITAL • BUSINESS</div>
+    </a>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#process">How It Works</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<!-- HERO SECTION -->
+<main>
+<section class="hero" id="home">
+    <div class="hero-content">
+        <span class="eyebrow">✦ WELCOME TO QUICK WORK</span>
+
+        <h1>
+            Your Ideas.<br>
+            Our Creativity.<br>
+            <span class="color-text">Your Success.</span>
+        </h1>
+
+        <p>
+            Welcome to QUICK WORK, your creative and digital service partner.
+            We help individuals, startups and businesses with attractive logo
+            design, stunning graphics, MSME and GSTIN assistance, and
+            professional website building — all in one place.
+        </p>
+
+        <div class="buttons">
+            <a href="#services" class="btn btn-main">
+                EXPLORE OUR SERVICES ↗
+            </a>
+
+            <a href="#contact" class="btn btn-outline">
+                CONTACT US
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+    <div class="section-title">
+        <small style="color:#7b42e8">WHAT WE DO</small>
+        <h2>Discover Our <span class="color-text">Creative Services</span></h2>
+        <p>
+            Four essential services to help you build your brand,
+            improve your online presence and manage business requirements.
+        </p>
+    </div>
+
+    <div class="service-grid">
+
+        <!-- LOGO DESIGN -->
+        <article class="service-card logo-service">
+            <div class="service-icon">🎨</div>
+            <h3>01. Logo Design</h3>
+
+            <p>
+                Make your brand memorable with a unique, professional logo
+                that reflects your business identity and creates a strong
+                first impression.
+            </p>
+
+            <ul>
+                <li>Modern and creative logo concepts</li>
+                <li>Brand colors and typography</li>
+                <li>Business and personal logos</li>
+                <li>Digital-ready logo files</li>
+            </ul>
+
+            <a href="#contact" class="service-link"
+               data-service="Logo Design">
+                CREATE MY LOGO →
+            </a>
+        </article>
+
+        <!-- GRAPHIC DESIGN -->
+        <article class="service-card graphic-service">
+            <div class="service-icon">🖌️</div>
+            <h3>02. Graphic Design</h3>
+
+            <p>
+                Turn your ideas into attractive visuals for advertising,
+                social media, marketing campaigns and business promotion.
+            </p>
+
+            <ul>
+                <li>Instagram and Facebook posts</li>
+                <li>YouTube thumbnails and banners</li>
+                <li>Flyers, brochures and posters</li>
+                <li>Business cards and promotional designs</li>
+            </ul>
+
+            <a href="#contact" class="service-link"
+               data-service="Graphic Design">
+                CREATE MY DESIGN →
+            </a>
+        </article>
+
+        <!-- MSME AND GSTIN -->
+        <article class="service-card registration-service">
+            <div class="service-icon">📋</div>
+            <h3>03. MSME & GSTIN Work</h3>
+
+            <p>
+                Get practical guidance for MSME/Udyam and GST registration,
+                including documentation requirements and application support
+                for eligible businesses.
+            </p>
+
+            <ul>
+                <li>Udyam/MSME registration guidance</li>
+                <li>GSTIN registration assistance</li>
+                <li>Document and information checklists</li>
+                <li>Application process support</li>
+            </ul>
+
+            <a href="#contact" class="service-link"
+               data-service="MSME and GSTIN Assistance">
+                DISCUSS YOUR NEEDS →
+            </a>
+        </article>
+
+        <!-- WEBSITE BUILDING -->
+        <article class="service-card website-service">
+            <div class="service-icon">💻</div>
+            <h3>04. Website Building</h3>
+
+            <p>
+                Establish your online presence with a beautiful, mobile-friendly
+                website that showcases your products, services and business
+                information.
+            </p>
+
+            <ul>
+                <li>Business and portfolio websites</li>
+                <li>Landing pages and service websites</li>
+                <li>Product catalogue websites</li>
+                <li>Responsive design for mobile and desktop</li>
+            </ul>
+
+            <a href="#contact" class="service-link"
+               data-service="Website Building">
+                BUILD MY WEBSITE →
+            </a>
+        </article>
+
+    </div>
+</section>
+
+<!-- COLORFUL BANNER -->
+<div class="rainbow">
+    🌟 QUICK WORK — Great Ideas Deserve Great Design! 🌟
+</div>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+    <div class="section-title">
+        <small style="color:#e83d96">WHY QUICK WORK?</small>
+        <h2>Creative Thinking Meets Practical Solutions</h2>
+        <p>
+            Our aim is to make creative and digital services easier
+            to understand, access and use for your business.
+        </p>
+    </div>
+
+    <div class="about-grid">
+        <article class="about-card">
+            <h3>✨ Creative Designs</h3>
+            <p>
+                Get designs tailored to your business identity,
+                audience and goals.
+            </p>
+        </article>
+
+        <article class="about-card">
+            <h3>📱 Modern Websites</h3>
+            <p>
+                Create a professional web presence that adapts to
+                mobile phones, tablets and computers.
+            </p>
+        </article>
+
+        <article class="about-card">
+            <h3>🤝 Personal Assistance</h3>
+            <p>
+                Explain your requirements and discuss the service,
+                project scope and next steps.
+            </p>
+        </article>
+    </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process" id="process">
+    <div class="section-title">
+        <small>OUR WORK PROCESS</small>
+        <h2>From Your Idea to the Final Result</h2>
+        <p>
+            A straightforward process with clear communication
+            at every stage.
+        </p>
+    </div>
+
+    <div class="process-grid">
+        <article class="process-card">
+            <span>STEP 01</span>
+            <h3>Discuss</h3>
+            <p>Tell us about your business and requirements.</p>
+        </article>
+
+        <article class="process-card">
+            <span>STEP 02</span>
+            <h3>Plan</h3>
+            <p>Confirm the scope, quotation and deliverables.</p>
+        </article>
+
+        <article class="process-card">
+            <span>STEP 03</span>
+            <h3>Create</h3>
+            <p>We work on the agreed design, website or assistance.</p>
+        </article>
+
+        <article class="process-card">
+            <span>STEP 04</span>
+            <h3>Deliver</h3>
+            <p>Review the result and complete the agreed handover.</p>
+        </article>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+    <div class="section-title">
+        <small>LET'S CONNECT</small>
+        <h2>Ready to Start Your Next Project?</h2>
+        <p>
+            Contact QUICK WORK for creative designs, website building,
+            or MSME and GSTIN assistance.
+        </p>
+    </div>
+
+    <div class="contact-grid">
+
+        <div class="contact-info">
+            <h3>Get in Touch</h3>
+
+            <p>
+                📧 <strong>Email Address</strong><br>
+                <a href="mailto:shad.jd@gmail.com">
+                    shad.jd@gmail.com
+                </a>
+            </p>
+
+            <p>
+                🟢 <strong>WhatsApp Number</strong><br>
+                <a href="https://wa.me/917652004861"
+                   target="_blank" rel="noopener noreferrer">
+                    +91 76520 04861
+                </a>
+            </p>
+
+            <p>
+                🌐 <strong>Business Name</strong><br>
+                QUICK WORK
+            </p>
+
+            <p>
+                Have a question or a project idea?
+                Send us a message and let's discuss your requirements.
+            </p>
+
+            <a class="btn btn-main"
+               href="https://wa.me/917652004861?text=Hello%20QUICK%20WORK%2C%20I%20would%20like%20to%20enquire%20about%20your%20services."
+               target="_blank" rel="noopener noreferrer">
+                CHAT ON WHATSAPP ↗
+            </a>
+        </div>
+
+        <!-- WHATSAPP ENQUIRY FORM -->
+        <form class="enquiry-form" id="enquiryForm">
+            <h3>Send a Project Enquiry</h3>
+
+            <label for="customerName">Your Name</label>
+            <input
+                type="text"
+                id="customerName"
+                placeholder="Enter your name"
+                required
+            >
+
+            <label for="customerEmail">Email Address</label>
+            <input
+                type="email"
+                id="customerEmail"
+                placeholder="Enter your email"
+                required
+            >
+
+            <label for="serviceChoice">Select a Service</label>
+            <select id="serviceChoice" required>
+                <option value="">Choose a service</option>
+                <option>Logo Design</option>
+                <option>Graphic Design</option>
+                <option>MSME Registration Assistance</option>
+                <option>GSTIN Registration Assistance</option>
+                <option>Website Building</option>
+            </select>
+
+            <label for="projectDetails">Project Details</label>
+            <textarea
+                id="projectDetails"
+                placeholder="Tell us what you need..."
+                required
+            ></textarea>
+
+            <button type="submit" class="btn btn-main">
+                SEND ENQUIRY VIA WHATSAPP ↗
+            </button>
+        </form>
+
+    </div>
+</section>
+</main>
+
+<!-- FOOTER -->
+<footer>
+    <div class="brand">QUICK <span>WORK</span></div>
+    <p>CREATIVE • DIGITAL • BUSINESS</p>
+
+    <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a href="mailto:shad.jd@gmail.com">Email Us</a>
+        <a href="https://wa.me/917652004861">WhatsApp</a>
+    </div>
+
+    <p>Imagine More. Create Better. Work Smarter.</p>
+    <p>© <span id="year"></span> QUICK WORK. All rights reserved.</p>
+</footer>
+
+<script>
+document.getElementById("year").textContent =
+    new Date().getFullYear();
+
+/* Automatically select the relevant service */
+document.querySelectorAll("[data-service]").forEach(function(link){
+    link.addEventListener("click", function(){
+        document.getElementById("serviceChoice").value =
+            this.getAttribute("data-service");
+    });
+});
+
+/* Prepare an enquiry message in WhatsApp */
+document.getElementById("enquiryForm").addEventListener(
+    "submit",
+    function(event){
+        event.preventDefault();
+
+        const name =
+            document.getElementById("customerName").value.trim();
+
+        const email =
+            document.getElementById("customerEmail").value.trim();
+
+        const service =
+            document.getElementById("serviceChoice").value;
+
+        const details =
+            document.getElementById("projectDetails").value.trim();
+
+        const message =
+            "Hello QUICK WORK!\n\n" +
+            "Name: " + name + "\n" +
+            "Email: " + email + "\n" +
+            "Service: " + service + "\n" +
+            "Project Details: " + details;
+
+        const whatsappURL =
+            "https://wa.me/917652004861?text=" +
+            encodeURIComponent(message);
+
+        window.open(
+            whatsappURL,
+            "_blank",
+            "noopener,noreferrer"
+        );
+    }
+);
+</script>
+
+</body>
+</html>
